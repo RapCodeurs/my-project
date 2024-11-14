@@ -1,4 +1,5 @@
 import Statistiques from "./cardComponents/Statistiques";
+import Buttons from "./Buttons";
 
 
 // On fait appel aux props
@@ -33,12 +34,9 @@ const Card = ({caracter}) => {
 
         </div>
         <div className="flex justify-between mt-2">
-          <button className="bg-blue-500 py-1 px-2 border-2 border-neutral-400 rounded-xl hover:border-neutral-700 hover:opacity-90 duration-300">
-            Attaquer
-          </button>
-          <button className="bg-orange-500 py-1 px-2 border-2 border-neutral-400 rounded-xl hover:border-neutral-700 hover:opacity-90 duration-300">
-            Defendre
-          </button>
+          {/* Importation des composants crées */}
+          <Buttons color="bg-blue-500">Attaquer</Buttons>
+          <Buttons color="bg-orange-500">Defendre</Buttons>
         </div>
       </div>
     </div>

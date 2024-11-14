@@ -1,14 +1,36 @@
-import { Link } from "react-router-dom"
+import { Link, NavLink } from "react-router-dom"
 
 
 
 const Navbar = () => {
+
+  // Creation d'un tableau pour les liens
+  const navItems = [
+    {text: "Acceuil", path: "/"},
+    {text: "Tous les combattants", path: "/all-characters"},
+    {text: "Legacy", path: "/story"}
+  ];
+
+
   return (
     // import de la librairie react-router-dom
     <nav className="p-4 mb-3 border-2 border-bottom customShadow">
       <div className="container flex justify-between mx-auto">
-        <Link href="/">Accueil</Link>
-        <Link href="/">La taverne des combatants</Link>
+        <Link className="text-bold text-xl bg-orange-400 border-2 rounded-xl p-2" to="/">La taverne des combattants</Link>
+        <div className="flex gap-3">
+
+          {/* Afficher grace à la methode map() */}
+          {/* Souligner quand on est sur la page */}
+
+          { navItems.map((item, index)=>(
+            <NavLink key={index} to={item.path} 
+            className={({isActive}) => `${isActive ? 'text-2xl underline bg-blue-600' : ''}
+            text-bold text-xl bg-blue-300 border-2 rounded-xl p-2 hover:bg-blue-400
+            `}
+            >{item.text}</NavLink>
+            ))
+          }
+        </div>
       </div>
     </nav>
   )
