@@ -24,8 +24,8 @@ const Navbar = () => {
 
           { navItems.map((item, index)=>(
             <NavLink key={index} to={item.path} 
-            className={({isActive}) => `${isActive ? 'text-2xl underline bg-blue-600' : ''}
-            text-bold text-xl bg-blue-300 border-2 rounded-xl p-2 hover:bg-blue-400
+            className={({isActive}) => `${isActive ? 'text-2xl underline bg-blue-400' : ''}
+            text-bold text-xl bg-neutral-300 border-2 rounded-xl p-2 hover:bg-neutral-400
             `}
             >{item.text}</NavLink>
             ))
