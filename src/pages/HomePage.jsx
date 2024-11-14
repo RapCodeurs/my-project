@@ -21,7 +21,7 @@ const HomePage = () => {
 
   return (
     <>
-      <h1 className="font-bold text-blue-900 rounded-xl bg-neutral-300 px-3 py-5 w-fit m-10">Mon projet REACT</h1>
+      <h1 className="font-bold text-blue-900 place-self-center rounded-xl bg-neutral-300 px-20 py-5 w-fit m-10">Mon projet REACT</h1>
         <div className="flex items-center justify-center gap-8 flex-wrap">
           {/* On map() sur le tabeau pour afficher pour les afficher à l' écran */}
           {

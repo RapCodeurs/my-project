@@ -16,7 +16,7 @@ const Navbar = () => {
     // import de la librairie react-router-dom
     <nav className="p-4 mb-3 border-2 border-bottom customShadow">
       <div className="container flex justify-between mx-auto">
-        <Link className="text-bold text-xl bg-orange-400 border-2 rounded-xl p-2" to="/">La taverne des combattants</Link>
+        <Link className="text-bold text-xl bg-orange-300 border-2 rounded-xl p-2 hover:bg-orange-500" to="/">La taverne des combattants</Link>
         <div className="flex gap-3">
 
           {/* Afficher grace à la methode map() */}
@@ -25,7 +25,7 @@ const Navbar = () => {
           { navItems.map((item, index)=>(
             <NavLink key={index} to={item.path} 
             className={({isActive}) => `${isActive ? 'text-2xl underline bg-blue-400' : ''}
-            text-bold text-xl bg-neutral-300 border-2 rounded-xl p-2 hover:bg-neutral-400
+            text-bold text-xl bg-neutral-300 border-2 rounded-xl p-2 hover:bg-blue-400
             `}
             >{item.text}</NavLink>
             ))
