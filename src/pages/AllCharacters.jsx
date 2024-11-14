@@ -39,7 +39,7 @@ const AllCharacters = () => {
 
   return (
     <div>
-      <h1 className="text-5xl text-center font-bold mb-8">Tous les personnages</h1>
+      <h1 className="text-5xl text-center font-bold mt-8 mb-14">Tous les personnages</h1>
       <div className="flex flex-wrap justify-center gap-8">
         {
           characters.map((item) =>(
