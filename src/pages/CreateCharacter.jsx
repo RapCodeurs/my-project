@@ -19,6 +19,12 @@ const CreateCharacter = () => {
 
     const newCharacter = {name, image, health: parseInt(health), magic: parseInt(magic), power: parseInt(power), side};
 
+
+    if(newCharacter.name.length < 3) {
+      toast.error('Erreur le nom doit supperieur à 3 lettres');
+      return;
+    }
+    
     console.log(newCharacter);
 
     const oldCharacters = JSON.parse(localStorage.getItem("characters")) || [];
