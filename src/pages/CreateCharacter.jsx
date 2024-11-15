@@ -51,7 +51,7 @@ const CreateCharacter = () => {
 
       <form 
       onSubmit={(e) => handleSubmit(e)}
-      className="p-4 border border-gray-300 bg-neutral-200 rounded place-self-center w-[600px]">
+      className="p-4 border border-gray-300 bg-neutral-200 rounded place-self-center w-[500px]">
 
         <ElementsInput constante={name} title="Nom" type="text" callback={setName}/>
 
