@@ -3,6 +3,7 @@ import HomePage from "./pages/HomePage"
 import Layout from "./components/Layout"
 import AllCharacters from "./pages/AllCharacters"
 import ErrorPage from "./pages/ErrorPage"
+import CreateCharacter from "./pages/CreateCharacter"
 
 const router = createBrowserRouter([
   {
@@ -11,6 +12,7 @@ const router = createBrowserRouter([
     children: [
       {path : "/", element: <HomePage/>},
       {path : "/all-characters", element: <AllCharacters/>},
+      {path : "/creer-un-personnage", element: <CreateCharacter/>},
       {path : "/*", element: <ErrorPage/>}
     ]
   }
