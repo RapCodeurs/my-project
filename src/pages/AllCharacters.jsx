@@ -16,6 +16,8 @@ const AllCharacters = () => {
     fecthCaracters();
   }, [])
 
+  const pathImg = "/src/assets/images/personnages/";
+
 
   async function fecthCaracters(){
     try {
@@ -30,6 +32,13 @@ const AllCharacters = () => {
       console.table(data);
       // appel de la methode setCharacters
       setCharacters(data);
+
+      const caractersWithPathImg = data.map((item) => ({
+        ...item,
+        image: `${pathImg}${item.image}`
+      }))
+
+      setCharacters(caractersWithPathImg);
       
     } catch (error) {
       console.log('Verifiew votre url ->', error)

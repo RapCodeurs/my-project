@@ -18,7 +18,9 @@ const Card = ({caracter}) => {
 
     <div className="flex flex-col border-2 border-neutral-500 w-[250px] h-[400px] rounded-xl customShadow overflow-hidden">
       <div className="w-[250px] h[250px] overflow-hidden ">
-        <img src={`./src/assets/images/personnages/${caracter.image}`} alt="chevalier" className="object-cover duration-300 hover:scale-105"
+        <img src={caracter.image} 
+        alt="chevalier" 
+        className="object-cover duration-300 hover:scale-105"
         />
       </div>
       <div className="p-2">

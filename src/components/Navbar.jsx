@@ -9,6 +9,7 @@ const Navbar = () => {
     {text: "Acceuil", path: "/"},
     {text: "Tous les combattants", path: "/all-characters"},
     {text: "Nouveau", path: "/creer-un-personnage"},
+    {text: "Personnages", path: "/local-personnage"},
     {text: "Legacy", path: "/story"}
   ];
 
