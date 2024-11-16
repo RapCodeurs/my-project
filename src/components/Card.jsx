@@ -16,7 +16,7 @@ const Card = ({caracter}) => {
 
   return (
 
-    <div className="flex flex-col border-2 border-neutral-500 w-[250px] h-[400px] rounded-xl customShadow overflow-hidden">
+    <div className={`flex flex-col border-2 border-neutral-500 w-[250px] h-[400px] rounded-xl customShadow overflow-hidden ${caracter.side}Shadow`}>
       <div className="w-[250px] h[250px] overflow-hidden ">
         <img src={caracter.image} 
         alt="chevalier" 
@@ -24,7 +24,12 @@ const Card = ({caracter}) => {
         />
       </div>
       <div className="p-2">
-        <p className="text-xl text-center font-bold">{caracter.name}</p>
+        <div className="flex justify-between items-center">
+
+          <div className="w-6"></div>{/* Juste pour center */}
+          <p className="text-xl text-center font-bold">{caracter.name}</p>
+          <p className="text-xs text-gray-400 opacity-80">{caracter.from}</p>
+        </div>
         <div className="flex flex-col">
         
          {/* On map() sur le tabeau pour afficher pour les afficher à l' écran */}

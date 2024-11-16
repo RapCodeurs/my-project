@@ -7,8 +7,7 @@ const Navbar = () => {
   // Creation d'un tableau pour les liens
   const navItems = [
     {text: "Acceuil", path: "/"},
-    {text: "Tous les combattants", path: "/all-characters"},
-    {text: "Nouveau", path: "/creer-un-personnage"},
+    {text: "ApiCombattans", path: "/api-combattants"},
     {text: "Personnages", path: "/local-personnage"},
     {text: "Legacy", path: "/story"}
   ];

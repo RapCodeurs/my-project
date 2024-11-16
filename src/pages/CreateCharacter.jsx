@@ -17,7 +17,7 @@ const CreateCharacter = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const newCharacter = {name, image, health: parseInt(health), magic: parseInt(magic), power: parseInt(power), side};
+    const newCharacter = {name, image, health: parseInt(health), magic: parseInt(magic), power: parseInt(power), side, from: "LocalDatas"};
 
 
     if(newCharacter.name.length < 3) {

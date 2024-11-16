@@ -35,7 +35,9 @@ const AllCharacters = () => {
 
       const caractersWithPathImg = data.map((item) => ({
         ...item,
-        image: `${pathImg}${item.image}`
+        image: `${pathImg}${item.image}`,
+        from: "apiDatas",
+        side: item.side_name
       }))
 
       setCharacters(caractersWithPathImg);
