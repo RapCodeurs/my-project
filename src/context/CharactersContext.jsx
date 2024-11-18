@@ -5,7 +5,7 @@ import {
   addHardCharacters,
   addApiCharacters,
   addLocalCharacters,
-} from "../utils/contextFunction";
+} from "../hooks/useContextFunction";
 
 // on initialise le context
 
