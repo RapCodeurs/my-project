@@ -1,6 +1,7 @@
 import Statistiques from "./cardComponents/Statistiques";
 import Buttons from "./Buttons";
 import { useManagerCharacters } from "../hooks/useManagerCharacters";
+import { Link } from "react-router-dom";
 
 // On fait appel aux props
 const Card = ({ caracter }) => {
@@ -45,7 +46,16 @@ const Card = ({ caracter }) => {
         </div>
         <div className="flex justify-between mt-2">
           {/* Importation des composants crées */}
-          <Buttons color="bg-blue-500">Modifier</Buttons>
+          {caracter.from === "LocalDatas" ? (
+            <Link to={`/modifier-personnage/${caracter.id}`}>
+              <Buttons color="bg-blue-500">Modifier</Buttons>
+            </Link>
+          ) : (
+            <Buttons color="bg-blue-500 cursor-not-allowed">
+              Non modifiable
+            </Buttons>
+          )}
+
           <Buttons
             color="bg-red-600"
             onClick={() => deleteCharacters(caracter.id)}

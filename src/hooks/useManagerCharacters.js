@@ -41,6 +41,28 @@ export const useManagerCharacters = () => {
     );
   }
 
+  function updateCharacter(id, updatedCharacter) {
+    // Recuperer tous les personnages
+    const storageCharacters =
+      JSON.parse(localStorage.getItem("characters")) || [];
+    // Trouvé le personnage grace à son index
+    const characterIndex = storageCharacters.findIndex(
+      (item) => item.id === id
+    );
+
+    if (characterIndex !== -1) {
+      storageCharacters[characterIndex] = {
+        ...storageCharacters[characterIndex],
+        ...updatedCharacter,
+      };
+
+      localStorage.setItem("characters", JSON.stringify(storageCharacters));
+      setLocalCharacters(storageCharacters);
+    } else {
+      console.error("Personnage non trouvé");
+    }
+  }
+
   function deleteCharacters(id) {
     const characterData = findCharacterById(id);
 
@@ -79,5 +101,5 @@ export const useManagerCharacters = () => {
     }
   }
 
-  return { deleteCharacters };
+  return { deleteCharacters, findCharacterById, updateCharacter };
 };
