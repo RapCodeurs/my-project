@@ -1,21 +1,14 @@
-import { useEffect, useState } from "react"
+import { useContext} from "react"
+import { CharactersContext } from "../context/CharactersContext";
 import Card from "../components/Card"
 import { Link } from "react-router-dom";
 
 
 const LocalCharactersPage = () => {
 
-  const [characters, setCharacters] = useState([]);
-
-  useEffect(()=>{
-    fetchCharacters();
-  }, [])
-
-  function fetchCharacters(){
-
-    setCharacters(JSON.parse(localStorage.getItem('characters')) || []);
-  }
-
+  //On appelle le useContext et ChararctersContext
+  const {localCharacters} = useContext(CharactersContext);
+  console.log(localCharacters);
 
   return (
     <div>
@@ -29,8 +22,9 @@ const LocalCharactersPage = () => {
       </div>
 
       <div className="flex flex-wrap justify-center gap-8">
+        {/* Et on map sur le localCharacters */}
         {
-          characters.map((item) =>(
+          localCharacters.map((item) =>(
             <Card key={item.id} caracter={item}/>
           ))
         }

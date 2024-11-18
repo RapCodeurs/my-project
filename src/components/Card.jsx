@@ -4,7 +4,7 @@ import Buttons from "./Buttons";
 
 // On fait appel aux props
 const Card = ({caracter}) => {
-  console.table(caracter)
+  //console.table(caracter)
   
   //D'abord creation d'un tableau avec les differents elements
   const allStats = [

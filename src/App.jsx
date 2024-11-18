@@ -5,6 +5,7 @@ import ApiCharactersPage from "./pages/ApiCharactersPage"
 import ErrorPage from "./pages/ErrorPage"
 import CreateCharacter from "./pages/CreateCharacter"
 import LocalCharactersPage from "./pages/LocalCharactersPage"
+import AllCharactersPages from "./pages/AllCharactersPages"
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,7 @@ const router = createBrowserRouter([
       {path : "/api-combattants", element: <ApiCharactersPage/>},
       {path : "/creer-un-personnage", element: <CreateCharacter/>},
       {path : "/local-personnage", element: <LocalCharactersPage/>},
+      {path : "/tous-les-combattants", element: <AllCharactersPages/>},
       {path : "/*", element: <ErrorPage/>}
     ]
   }

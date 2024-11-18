@@ -3,6 +3,7 @@ import SidesInput from "../components/formComponants/SidesInput";
 import ImagesInput from "../components/formComponants/ImagesInput";
 import ElementsInput from "../components/formComponants/ElementsInput";
 import { toast } from "sonner";
+import { nanoid } from "nanoid";
 
 const CreateCharacter = () => {
 
@@ -17,7 +18,7 @@ const CreateCharacter = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const newCharacter = {name, image, health: parseInt(health), magic: parseInt(magic), power: parseInt(power), side, from: "LocalDatas"};
+    const newCharacter = {id: nanoid(6), name, image, health: parseInt(health), magic: parseInt(magic), power: parseInt(power), side, from: "LocalDatas"};
 
 
     if(newCharacter.name.length < 3) {

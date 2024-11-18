@@ -7,7 +7,7 @@ const Statistiques = ({stat, value, unit}) => {
 
   const [statValue, setStatValue] = useState(value);
 
-  console.log(stat)
+  //console.log(stat)
   return (
     <div className="flex justify-between">
             <p className="font-bold">{stat} :</p>
