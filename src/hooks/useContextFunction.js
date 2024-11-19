@@ -149,3 +149,6 @@ export function addLocalCharacters(setLocalCharacters) {
   setLocalCharacters(JSON.parse(localStorage.getItem("characters")) || []);
 }
 
+export const addFetchCharacters = (setApiCharacters) => {
+  addApiCharacters(setApiCharacters);
+};
